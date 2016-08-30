@@ -1,2 +1,8 @@
 # LoveCode
-Desarrollo de un proyecto desarrollado con el lenguaje Java, se trabajara con arquitectura N-Capas
+Desarrollo de un proyecto con el lenguaje Java.
+
+#Tecnologias que implementa la aplicacion
+Arquitectura N-Capas
+Tendran en cuenta las convenciones de programacion Java
+Patrones de diseño
+
