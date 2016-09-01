@@ -14,7 +14,7 @@ public class GestorJDBCSqlServer extends GestorJDBC{
     public void abrirConexion() throws Exception {
         Class.forName("org.sqlserver.Driver");
         String url = "jdbc:sqlserver://localhost:5432/VentaAutomoviles";
-        
+        conexion = DriverManager.getConnection(url, "postgres", "123456");
     }
     
 }
