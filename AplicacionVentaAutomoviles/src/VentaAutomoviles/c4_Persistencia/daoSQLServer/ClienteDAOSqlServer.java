@@ -1,28 +1,33 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package VentaAutomoviles.c4_Persistencia.daoSQLServer;
-
-import VentaAutomoviles.c3_Dominio.Contrato.FabricaAbstractaDAO;
-import VentaAutomoviles.c3_Dominio.Contrato.IAutomovilDAO;
 import VentaAutomoviles.c3_Dominio.Contrato.IClienteDAO;
-import VentaAutomoviles.c4_Persistencia.GestorJDBC;
-
-public class FabricaDAOSQLServer extends FabricaAbstractaDAO{
+import VentaAutomoviles.c3_Dominio.Entidades.Cliente;
+import java.sql.SQLException;
+/**
+ *
+ * @author Hernan
+ */
+public class ClienteDAOSqlServer implements IClienteDAO{
 
     @Override
-    public GestorJDBC crearGestorJDBC() {
+    public int ingresar(Cliente automovil) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public IAutomovilDAO crearAutomovilDAO(GestorJDBC gestorJDBC) {
+    public int modificar(Cliente automovil) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public IClienteDAO crearClienteDAO(GestorJDBC gestorJDBC) {
+    public int eliminar(Cliente automovil) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
     
     
 }
