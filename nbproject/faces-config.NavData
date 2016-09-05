@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only">
+        <Node id="FaceRegistrarProducto.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="index.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="FaceCosultarProductos.xhtml" x="150" y="300" zoom="true"/>
+    </Scope>
+    <Scope Scope="Project">
+        <Node id="FaceRegistrarProducto.xhtml" x="276" y="35" zoom="true"/>
+        <Node id="index.xhtml" x="66" y="174" zoom="true"/>
+        <Node id="FaceCosultarProductos.xhtml" x="291" y="334" zoom="false"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations">
+        <Node id="FaceRegistrarProducto.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="index.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="FaceCosultarProductos.xhtml" x="150" y="300" zoom="true"/>
+    </Scope>
+</Scene>
