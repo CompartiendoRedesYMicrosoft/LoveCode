@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+                <h:dataTable value="#{gestionaProductoMBean.listaProductos}" var="itemProductos">
+                    <f:facet name="header">
+                        <h:outputLabel value="#{propiedades.listaProductos}" />  
+                    </f:facet>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputLabel value="Nombre" />  
+                        </f:facet>
+                        <h:outputLabel value="#{itemProductos.nombre}" />  
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputLabel value="Precio" />  
+                        </f:facet>
+                        <h:outputLabel value="#{itemProductos.precio}" />  
+                    </h:column>
+                </h:dataTable>
+                <h:commandLink value="#{propiedades.botCancelar}" action="Inicio" />
+            </h:form>
+        </f:view>
+      
+    </h:body>
+</html>
+
