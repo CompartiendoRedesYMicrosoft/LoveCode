@@ -5,16 +5,21 @@ package VentaAutomoviles.c3_Dominio.Entidades;
  * @author MyOS
  */
 public class Automovil {
-    private String codigo;
+    private int automovilid;
     private String descripcion;
     private double precio;
 
-    public String getCodigo() {
-        return codigo;
+    public Automovil(int automovilid) {
+        this.automovilid = automovilid;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    
+    public int getAutomovilId() {
+        return automovilid;
+    }
+
+    public void setAutomovilId(int automovilid) {
+        this.automovilid = automovilid;
     }
 
     public String getDescripcion() {
