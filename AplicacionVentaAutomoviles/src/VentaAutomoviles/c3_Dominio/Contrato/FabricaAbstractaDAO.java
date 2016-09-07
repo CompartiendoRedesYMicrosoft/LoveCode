@@ -25,4 +25,6 @@ public abstract class FabricaAbstractaDAO {
     
     public abstract IAutomovilDAO crearAutomovilDAO(GestorJDBC gestorJDBC);
     
+    public abstract IClienteDAO crearClienteDAO(GestorJDBC gestorJDBC);
+    
 }
