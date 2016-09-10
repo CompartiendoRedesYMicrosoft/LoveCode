@@ -8,11 +8,6 @@ public class Automovil {
     private int automovilid;
     private String descripcion;
     private double precio;
-
-    public Automovil(int automovilid) {
-        this.automovilid = automovilid;
-    }
-
     
     public int getAutomovilId() {
         return automovilid;

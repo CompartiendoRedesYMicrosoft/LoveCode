@@ -10,12 +10,12 @@ public class FabricaDAOSQLServer extends FabricaAbstractaDAO{
 
     @Override
     public GestorJDBC crearGestorJDBC() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new GestorJDBCSqlServer();
     }
 
     @Override
     public IAutomovilDAO crearAutomovilDAO(GestorJDBC gestorJDBC) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new AutomovilDAOSqlServer(gestorJDBC);
     }
 
     @Override

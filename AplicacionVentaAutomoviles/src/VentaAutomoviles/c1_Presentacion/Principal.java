@@ -5,6 +5,8 @@
  */
 package VentaAutomoviles.c1_Presentacion;
 
+import VentaAutomoviles.c1_Presentacion.Mantenedores.FormGestionarAutomovil;
+
 /**
  *
  * @author MyOS
@@ -16,6 +18,8 @@ public class Principal {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        FormGestionarAutomovil formGestionarAutomovil= new FormGestionarAutomovil(null, true);
+        formGestionarAutomovil.setVisible(true);
     }
     
 }

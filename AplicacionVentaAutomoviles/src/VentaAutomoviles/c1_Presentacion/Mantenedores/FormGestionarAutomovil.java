@@ -5,11 +5,17 @@
  */
 package VentaAutomoviles.c1_Presentacion.Mantenedores;
 
+import VentaAutomoviles.c2_Aplicacion.GestionarAutomovilServicio;
+import VentaAutomoviles.c3_Dominio.Entidades.Automovil;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author user
  */
 public class FormGestionarAutomovil extends javax.swing.JDialog {
+
+    Automovil automovil = null;
 
     /**
      * Creates new form FormGestionarAutomovil
@@ -17,6 +23,7 @@ public class FormGestionarAutomovil extends javax.swing.JDialog {
     public FormGestionarAutomovil(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        automovil = new Automovil();
     }
 
     /**
@@ -47,6 +54,11 @@ public class FormGestionarAutomovil extends javax.swing.JDialog {
         jLabel3.setText("Precio");
 
         btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
         btnCancelar.setText("Cancelar");
 
@@ -103,7 +115,26 @@ public class FormGestionarAutomovil extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        // TODO add your handling code here:
+        automovil.setDescripcion(txtDescripcion.getText());
+        automovil.setPrecio(Double.parseDouble(txtPrecio.getText()));
+        GestionarAutomovilServicio gestionarAutomovilServicio = new GestionarAutomovilServicio();
+        int registros_afectados;
+        try {
+            registros_afectados = gestionarAutomovilServicio.crearAutomovil(automovil);
+            if (registros_afectados == 1) {
+                JOptionPane.showMessageDialog(null, "Rgistro correcto");
+            } else {
+                JOptionPane.showMessageDialog(null, "No se pudo registrar");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnGuardar;
