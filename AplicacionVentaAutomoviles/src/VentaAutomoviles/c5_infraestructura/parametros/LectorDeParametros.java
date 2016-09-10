@@ -12,7 +12,7 @@ public class LectorDeParametros {
         InputStream canalDeEntrada;
         Properties propiedades = new Properties();
         try {
-            canalDeEntrada = Thread.currentThread().getContextClassLoader().getResourceAsStream("VentaAutomoviles/c5_Infraestructura/parametros/Parametros.properties");
+            canalDeEntrada = Thread.currentThread().getContextClassLoader().getResourceAsStream("VentaAutomoviles/c5_infraestructura/parametros/Parametros.properties");
             propiedades.load(canalDeEntrada);            
             valorParametro = propiedades.getProperty(parametro);
             return valorParametro;
