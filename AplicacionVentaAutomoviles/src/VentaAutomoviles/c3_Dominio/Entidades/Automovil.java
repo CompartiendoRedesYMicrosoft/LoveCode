@@ -6,31 +6,13 @@ package VentaAutomoviles.c3_Dominio.Entidades;
  */
 public class Automovil {
     private int automovilid;
+    private String color;
     private String descripcion;
-    private double precio;
-    
-    public int getAutomovilId() {
-        return automovilid;
-    }
-
-    public void setAutomovilId(int automovilid) {
-        this.automovilid = automovilid;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }
+    private String motor;
+    private int arosDeAleacion;
+    private int anioFabricacion;
+    private String detalles;
+    private String urlImagen;
+    private String modelo;
     
 }

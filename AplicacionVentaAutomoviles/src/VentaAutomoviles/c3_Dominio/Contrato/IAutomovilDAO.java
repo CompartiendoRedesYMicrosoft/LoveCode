@@ -10,8 +10,9 @@ import java.sql.SQLException;
 public interface IAutomovilDAO {
 
     public int ingresar(Automovil automovil) throws SQLException;
-
     public int modificar(Automovil automovil) throws SQLException;
-
     public int eliminar(Automovil automovil) throws SQLException;
+    public int mostrarTodos() throws SQLException;
+    public int buscar(int id) throws SQLException;
+    
 }

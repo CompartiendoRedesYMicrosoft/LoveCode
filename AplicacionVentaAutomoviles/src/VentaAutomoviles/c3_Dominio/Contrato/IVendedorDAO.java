@@ -5,17 +5,18 @@
  */
 package VentaAutomoviles.c3_Dominio.Contrato;
 
-import VentaAutomoviles.c3_Dominio.Entidades.Cliente;
+import VentaAutomoviles.c3_Dominio.Entidades.Vendedor;
 import java.sql.SQLException;
 
 /**
  *
- * @author user
+ * @author Practicas-Tesis
  */
-public interface IClienteDAO {
-    public int ingresar(Cliente cliente) throws SQLException;
-    public int modificar(Cliente cliente) throws SQLException;
-    public int eliminar(Cliente cliente) throws SQLException;
+public interface IVendedorDAO {
+    public int ingresar(Vendedor vendedor) throws SQLException;
+    public int modificar(Vendedor vendedor) throws SQLException;
+    public int eliminar(Vendedor vendedor) throws SQLException;
     public int mostrarTodos() throws SQLException;
     public int buscar(int id) throws SQLException;
+    
 }
