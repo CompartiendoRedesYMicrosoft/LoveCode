@@ -12,20 +12,38 @@ import VentaAutomoviles.c6_transversal.excepciones.ExcepcionRegla;
  * @author Hernan
  */
 public class Cliente {
-    private int idcliente;
-    private String nombreCliente;
-    private String apellidosCliente;
+    private int clienteId;
+    private String nombre;
+    private String apellidos;
     private String dni;
-    private String direccionCliente;
-    private String emailCliente;
-    private int telefonoCliente;
+    private String direccion;
+    private String telefono;
+    private String correo;
+    private String sexo;
+    private String tipo;
 
-    public int getIdcliente() {
-        return idcliente;
+    public int getClienteId() {
+        return clienteId;
     }
 
-    public void setIdcliente(int idcliente) {
-        this.idcliente = idcliente;
+    public void setClienteId(int clienteId) {
+        this.clienteId = clienteId;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
 
     public String getDni() {
@@ -35,52 +53,50 @@ public class Cliente {
     public void setDni(String dni) {
         this.dni = dni;
     }
-    
-    public String getNombreCliente() {
-        return nombreCliente;
+
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setNombreCliente(String nombreCliente) {
-        this.nombreCliente = nombreCliente;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
-    public String getApellidosCliente() {
-        return apellidosCliente;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public void setApellidosCliente(String apellidosCliente) {
-        this.apellidosCliente = apellidosCliente;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
-    public String getDireccionCliente() {
-        return direccionCliente;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setDireccionCliente(String direccionCliente) {
-        this.direccionCliente = direccionCliente;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
-    public String getEmailCliente() {
-        return emailCliente;
+    public String getSexo() {
+        return sexo;
     }
 
-    public void setEmailCliente(String emailCliente) {
-        this.emailCliente = emailCliente;
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 
-    public int getTelefonoCliente() {
-        return telefonoCliente;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setTelefonoCliente(int telefonoCliente) {
-        this.telefonoCliente = telefonoCliente;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
-    
-    //Metodos
     
     public void validarDNI() throws ExcepcionRegla{
         if(dni.length()>8){
-            throw new ExcepcionRegla(" Error: El DNI no debe superar los 8 Caracteres");
+            throw new ExcepcionRegla("Error: El DNI no debe superar los 8 Caracteres");
         }
     } 
 }

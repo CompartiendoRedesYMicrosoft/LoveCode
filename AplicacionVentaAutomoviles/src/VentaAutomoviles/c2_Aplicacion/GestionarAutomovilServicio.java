@@ -22,6 +22,7 @@ public class GestionarAutomovilServicio {
     
     public int crearAutomovil(Automovil automovil) throws Exception{
         gestorJDBC.abrirConexion();
+        //VALIDAR REGLAS NEGOCIO
         int registros_afecctados = automovilDAO.ingresar(automovil);
         gestorJDBC.cerrarConexion();
         return registros_afecctados;

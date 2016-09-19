@@ -5,7 +5,7 @@ package VentaAutomoviles.c3_Dominio.Entidades;
  * @author MyOS
  */
 public class Automovil {
-    private int automovilid;
+    private int automovilId;
     private String color;
     private String descripcion;
     private String motor;

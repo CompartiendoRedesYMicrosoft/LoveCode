@@ -25,7 +25,6 @@ public class AutomovilDAOSqlServer implements IAutomovilDAO{
                 + "values(?,?)";
         PreparedStatement sentencia = gestorJBDC.prepararSentencia(sentenciaSQL);
         sentencia.setString(1, automovil.getDescripcion());
-        sentencia.setDouble(2, automovil.getPrecio());
         return sentencia.executeUpdate();
         
     }
