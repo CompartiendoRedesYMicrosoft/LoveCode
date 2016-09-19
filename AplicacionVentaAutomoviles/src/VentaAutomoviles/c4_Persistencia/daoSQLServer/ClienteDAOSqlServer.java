@@ -28,7 +28,7 @@ public class ClienteDAOSqlServer implements IClienteDAO{
     @Override
     public int eliminar(Cliente cliente) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    } 
+    }
 
     @Override
     public int mostrarTodos() throws SQLException {
@@ -39,4 +39,5 @@ public class ClienteDAOSqlServer implements IClienteDAO{
     public int buscar(int id) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
 }

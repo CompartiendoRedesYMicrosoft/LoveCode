@@ -6,10 +6,7 @@ package VentaAutomoviles.c3_Dominio.Entidades;
  */
 public class Automovil {
     private int automovilId;
-<<<<<<< HEAD
-=======
     private String modelo ;
->>>>>>> origin/master
     private String color;
     private double  precio ;
     private String motor;
