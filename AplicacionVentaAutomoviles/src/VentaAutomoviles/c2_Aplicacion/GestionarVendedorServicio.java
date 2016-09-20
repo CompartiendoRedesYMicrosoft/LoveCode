@@ -9,12 +9,17 @@ import VentaAutomoviles.c3_Dominio.Contrato.FabricaAbstractaDAO;
 import VentaAutomoviles.c3_Dominio.Contrato.IVendedorDAO;
 import VentaAutomoviles.c3_Dominio.Entidades.Vendedor;
 import VentaAutomoviles.c4_Persistencia.GestorJDBC;
+import com.sun.org.apache.bcel.internal.generic.D2F;
+import java.sql.Date;
+import java.time.LocalDate;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Erick Sanchez
  */
 public class GestionarVendedorServicio {
+
     private GestorJDBC gestorJDBC;
     private IVendedorDAO vendedorDAO;
 
@@ -23,17 +28,20 @@ public class GestionarVendedorServicio {
         gestorJDBC = fabricaAbstractaDAO.crearGestorJDBC();
         vendedorDAO = fabricaAbstractaDAO.crearVendedorDAO(gestorJDBC);
     }
-        
-        public int crearVendedor(Vendedor vendedor) throws Exception{
-            gestorJDBC.abrirConexion();
-            try{
-                int registros_afectados = vendedorDAO.ingresar(vendedor);
-                gestorJDBC.cerrarConexion();
-                return registros_afectados;
-            }catch(Exception e){
-                gestorJDBC.cancelarTransaccion();
-                gestorJDBC.cerrarConexion();
-                throw e;
-            }
+    
+    
+
+    public int crearVendedor(Vendedor vendedor) throws Exception {
+        gestorJDBC.abrirConexion();
+        try {
+            int registros_afectados = vendedorDAO.ingresar(vendedor);
+            gestorJDBC.cerrarConexion();
+            return registros_afectados;
+        } catch (Exception e) {
+            gestorJDBC.cancelarTransaccion();
+            gestorJDBC.cerrarConexion();
+            throw e;
         }
- }
+    }
+    
+}
