@@ -23,21 +23,22 @@ public class AutomovilDAOSqlServer implements IAutomovilDAO{
        
     @Override
     public int ingresar(Automovil automovil) throws SQLException {
-        String sentenciaSQL= "insert into automovil(modelo, color, precio, motor, anioFabricacion, descripcion, imagen) "
+        String sentenciaSQL= "insert into automovil(modelo, color, precio, motor, anio_fabricacion, descripcion, imagen) "
                 + "values(?,?,?,?,?,?,?)";
         PreparedStatement sentencia = gestorJBDC.prepararSentencia(sentenciaSQL);
         sentencia.setString(1, automovil.getModelo());
         sentencia.setString(2, automovil.getColor());
         sentencia.setDouble(3, automovil.getPrecio());
-        sentencia.setString(4, automovil.getAnioFabricacion());
-        sentencia.setString(5, automovil.getDescripcion());
-        sentencia.setString(6, automovil.getImagen());
+        sentencia.setString(4, automovil.getMotor());
+        sentencia.setString(5, automovil.getAnioFabricacion());
+        sentencia.setString(6, automovil.getDescripcion());
+        sentencia.setString(7, automovil.getImagen());
         return sentencia.executeUpdate();
     }
 
     @Override
     public int modificar(Automovil automovil) throws SQLException {
-        String sentenciaSQL = "update producto set modelo = ?, color= ?, precio = ?, anioFabricacion= ?, imagen= ? where productoid = ?";
+        String sentenciaSQL = "update producto set modelo=?, color=?, precio=?, motor=?, anio_fabricacion=?, descripcion=?, imagen=? where automovil_id = ?";
         PreparedStatement sentencia = gestorJBDC.prepararSentencia(sentenciaSQL);
         sentencia.setString(1, automovil.getModelo());
         sentencia.setString(2, automovil.getColor());
@@ -50,7 +51,7 @@ public class AutomovilDAOSqlServer implements IAutomovilDAO{
     @Override
     public int eliminar(Automovil automovil) throws SQLException {
         //Metodo para mostrar como se hace el 
-        String sentenciaSQL = "delete from producto where productoid = ?";
+        String sentenciaSQL = "delete from automovil where automovil_id = ?";
         PreparedStatement sentencia = gestorJBDC.prepararSentencia(sentenciaSQL);
         sentencia.setInt(1, automovil.getAutomovilId());
         return sentencia.executeUpdate();
@@ -62,44 +63,22 @@ public class AutomovilDAOSqlServer implements IAutomovilDAO{
         Automovil automovil;
         ResultSet resultado;
         String sentenciaSQL;
-        sentenciaSQL="";
+        sentenciaSQL="select automovil_id, modelo, color, precio, motor, anio_fabricacion, descripcion, imagen from automovil where modelo=?";
         resultado= gestorJBDC.ejecutarConsulta(sentenciaSQL);
         while (resultado.next()) {
             automovil= new Automovil();
-            automovil.setAutomovilId(resultado.getInt("NOMBREDECOLUMNAENLABD"));
-            automovil.setModelo(resultado.getString(""));
-            automovil.setColor(resultado.getString(""));
-            automovil.setPrecio(resultado.getDouble(""));
-            automovil.setMotor(resultado.getString(""));
-            automovil.setAnioFabricacion(resultado.getString(""));
-            automovil.setDescripcion(resultado.getString(""));
-            automovil.setImagen(resultado.getString(""));
+            automovil.setAutomovilId(resultado.getInt("automovil_id"));
+            automovil.setModelo(resultado.getString("modelo"));
+            automovil.setColor(resultado.getString("color"));
+            automovil.setPrecio(resultado.getDouble("precio"));
+            automovil.setMotor(resultado.getString("motor"));
+            automovil.setAnioFabricacion(resultado.getString("anio_fabricacion"));
+            automovil.setDescripcion(resultado.getString("descripcion"));
+            automovil.setImagen(resultado.getString("imagen"));
             listaAutomoviles.add(automovil);
         }
         resultado.close();
         return listaAutomoviles;
-    }
-
-    @Override
-    public Automovil buscar(int id) throws SQLException {
-        Automovil automovil=null;
-        ResultSet resultado;
-        String sentenciaSQL;
-        sentenciaSQL="";
-        resultado= gestorJBDC.ejecutarConsulta(sentenciaSQL);
-        if(resultado.next()){
-            automovil= new Automovil();
-            automovil.setAutomovilId(resultado.getInt("NOMBREDECOLUMNAENLABD"));
-            automovil.setModelo(resultado.getString(""));
-            automovil.setColor(resultado.getString(""));
-            automovil.setPrecio(resultado.getDouble(""));
-            automovil.setMotor(resultado.getString(""));
-            automovil.setAnioFabricacion(resultado.getString(""));
-            automovil.setDescripcion(resultado.getString(""));
-            automovil.setImagen(resultado.getString(""));
-        }
-        resultado.close();
-        return automovil;
     }
     
 }

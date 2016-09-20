@@ -33,14 +33,8 @@ public class FormMenu extends javax.swing.JFrame {
         gestionarProducto = new javax.swing.JMenuItem();
         gestionarMesa = new javax.swing.JMenuItem();
         gestionarCliente = new javax.swing.JMenuItem();
-        gestionarCocinero = new javax.swing.JMenuItem();
-        programacionDeMenus = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         registrarPedido = new javax.swing.JMenuItem();
-        generarComprobante = new javax.swing.JMenuItem();
-        jSeparator3 = new javax.swing.JPopupMenu.Separator();
-        reporteDeVentas = new javax.swing.JMenuItem();
-        reporteDeProductos = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         gestionarUsuarios = new javax.swing.JMenuItem();
         gestionarPermisos = new javax.swing.JMenuItem();
@@ -52,9 +46,9 @@ public class FormMenu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ItemGestionarProducto.setText("Gestionar Programacion");
+        ItemGestionarProducto.setText("Administracion");
 
-        gestionarProducto.setText("Gestionar Producto");
+        gestionarProducto.setText("Gestionar Automoviles");
         gestionarProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gestionarProductoActionPerformed(evt);
@@ -62,7 +56,7 @@ public class FormMenu extends javax.swing.JFrame {
         });
         ItemGestionarProducto.add(gestionarProducto);
 
-        gestionarMesa.setText("Gestionar Mesa");
+        gestionarMesa.setText("Gestionar Clientes");
         gestionarMesa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gestionarMesaActionPerformed(evt);
@@ -70,7 +64,7 @@ public class FormMenu extends javax.swing.JFrame {
         });
         ItemGestionarProducto.add(gestionarMesa);
 
-        gestionarCliente.setText("Gestionar Cliente");
+        gestionarCliente.setText("Gestionar Vendedores");
         gestionarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gestionarClienteActionPerformed(evt);
@@ -78,25 +72,9 @@ public class FormMenu extends javax.swing.JFrame {
         });
         ItemGestionarProducto.add(gestionarCliente);
 
-        gestionarCocinero.setText("Gestionar Cocinero");
-        gestionarCocinero.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                gestionarCocineroActionPerformed(evt);
-            }
-        });
-        ItemGestionarProducto.add(gestionarCocinero);
-
-        programacionDeMenus.setText("Programacion de menus");
-        programacionDeMenus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                programacionDeMenusActionPerformed(evt);
-            }
-        });
-        ItemGestionarProducto.add(programacionDeMenus);
-
         jMenuBar1.add(ItemGestionarProducto);
 
-        jMenu3.setText("Gestionar Pedidos");
+        jMenu3.setText("Ventas");
 
         registrarPedido.setText("Registrar Pedido");
         registrarPedido.addActionListener(new java.awt.event.ActionListener() {
@@ -105,31 +83,6 @@ public class FormMenu extends javax.swing.JFrame {
             }
         });
         jMenu3.add(registrarPedido);
-
-        generarComprobante.setText("Generar Comprobante");
-        generarComprobante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                generarComprobanteActionPerformed(evt);
-            }
-        });
-        jMenu3.add(generarComprobante);
-        jMenu3.add(jSeparator3);
-
-        reporteDeVentas.setText("Reporte de Ventas");
-        reporteDeVentas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reporteDeVentasActionPerformed(evt);
-            }
-        });
-        jMenu3.add(reporteDeVentas);
-
-        reporteDeProductos.setText("Reporte de Productos");
-        reporteDeProductos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reporteDeProductosActionPerformed(evt);
-            }
-        });
-        jMenu3.add(reporteDeProductos);
 
         jMenuBar1.add(jMenu3);
 
@@ -153,7 +106,7 @@ public class FormMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu1.setText("RestauranteSoft");
+        jMenu1.setText("Venta Automoviles");
 
         ayuda.setText("Ayuda");
         ayuda.addActionListener(new java.awt.event.ActionListener() {
@@ -213,35 +166,6 @@ public class FormMenu extends javax.swing.JFrame {
         
     }//GEN-LAST:event_gestionarClienteActionPerformed
 
-    private void gestionarCocineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gestionarCocineroActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_gestionarCocineroActionPerformed
-
-    private void programacionDeMenusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_programacionDeMenusActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_programacionDeMenusActionPerformed
-
-    private void registrarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarPedidoActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_registrarPedidoActionPerformed
-
-    private void generarComprobanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarComprobanteActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_generarComprobanteActionPerformed
-
-    private void reporteDeVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reporteDeVentasActionPerformed
-        // TODO add your handling code here
-       
-    }//GEN-LAST:event_reporteDeVentasActionPerformed
-
-    private void reporteDeProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reporteDeProductosActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_reporteDeProductosActionPerformed
-
     private void gestionarUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gestionarUsuariosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_gestionarUsuariosActionPerformed
@@ -262,6 +186,11 @@ public class FormMenu extends javax.swing.JFrame {
         // TODO add your handling code here
         this.dispose();
     }//GEN-LAST:event_salirActionPerformed
+
+    private void registrarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarPedidoActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_registrarPedidoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -305,9 +234,7 @@ public class FormMenu extends javax.swing.JFrame {
     private javax.swing.JMenu ItemGestionarProducto;
     private javax.swing.JMenuItem acercade;
     private javax.swing.JMenuItem ayuda;
-    private javax.swing.JMenuItem generarComprobante;
     private javax.swing.JMenuItem gestionarCliente;
-    private javax.swing.JMenuItem gestionarCocinero;
     private javax.swing.JMenuItem gestionarMesa;
     private javax.swing.JMenuItem gestionarPermisos;
     private javax.swing.JMenuItem gestionarProducto;
@@ -317,11 +244,7 @@ public class FormMenu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
-    private javax.swing.JPopupMenu.Separator jSeparator3;
-    private javax.swing.JMenuItem programacionDeMenus;
     private javax.swing.JMenuItem registrarPedido;
-    private javax.swing.JMenuItem reporteDeProductos;
-    private javax.swing.JMenuItem reporteDeVentas;
     private javax.swing.JMenuItem salir;
     // End of variables declaration//GEN-END:variables
 }
