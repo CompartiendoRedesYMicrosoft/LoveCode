@@ -1,5 +1,7 @@
 package VentaAutomoviles.c3_Dominio.Entidades;
 
+import java.sql.Date;
+
 /**
  *
  * @author user
@@ -8,13 +10,14 @@ public class Vendedor {
     private int clienteId;
     private String nombre;
     private String apellidos;
+    private Date fecha_nacimiento;
     private String dni;
     private String direccion;
     private String telefono;
     private String correo;
     private String sexo;
-    private String tipo;
-    
+    private double sueldo;
+
     public int getClienteId() {
         return clienteId;
     }
@@ -37,6 +40,14 @@ public class Vendedor {
 
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
+    }
+
+    public Date getFecha_nacimiento() {
+        return fecha_nacimiento;
+    }
+
+    public void setFecha_nacimiento(Date fecha_nacimiento) {
+        this.fecha_nacimiento = fecha_nacimiento;
     }
 
     public String getDni() {
@@ -79,12 +90,13 @@ public class Vendedor {
         this.sexo = sexo;
     }
 
-    public String getTipo() {
-        return tipo;
+    public double getSueldo() {
+        return sueldo;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
     }
+    
     
 }

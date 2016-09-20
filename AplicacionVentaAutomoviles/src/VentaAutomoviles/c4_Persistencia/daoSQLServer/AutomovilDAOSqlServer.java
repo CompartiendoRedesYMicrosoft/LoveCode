@@ -20,8 +20,7 @@ public class AutomovilDAOSqlServer implements IAutomovilDAO{
     public AutomovilDAOSqlServer(GestorJDBC gestorJBDC) {
         this.gestorJBDC = gestorJBDC;
     }
-        
-    
+       
     @Override
     public int ingresar(Automovil automovil) throws SQLException {
         String sentenciaSQL= "insert into automovil(modelo, color, precio, motor, anioFabricacion, descripcion, imagen) "
