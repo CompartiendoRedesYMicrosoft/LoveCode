@@ -15,8 +15,5 @@ import java.sql.SQLException;
 public interface IPedidoDAO {
     public int ingresar(Pedido pedido) throws SQLException;
     public int modificar(Pedido pedido) throws SQLException;
-    public int eliminar(Pedido pedido) throws SQLException;
-    public int mostrarTodos() throws SQLException;
-    public int buscar(int id) throws SQLException;
-    
+    public int mostrarTodos() throws SQLException;    
 }
