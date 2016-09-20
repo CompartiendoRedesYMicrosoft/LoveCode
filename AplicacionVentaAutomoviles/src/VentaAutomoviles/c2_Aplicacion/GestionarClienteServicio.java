@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package VentaAutomoviles.c2_Aplicacion;
 
 import VentaAutomoviles.c3_Dominio.Contrato.FabricaAbstractaDAO;
@@ -16,31 +11,31 @@ import VentaAutomoviles.c4_Persistencia.GestorJDBC;
  */
 public class GestionarClienteServicio {
     private GestorJDBC gestorJDBC;
-    private IClienteDAO iClienteDAO;
+    private IClienteDAO ClienteDAO;
     
     public GestionarClienteServicio(){
         FabricaAbstractaDAO fabricaAbstractaDAO= FabricaAbstractaDAO.getInstancia();
         gestorJDBC = fabricaAbstractaDAO.crearGestorJDBC();
-        iClienteDAO = fabricaAbstractaDAO.crearClienteDAO(gestorJDBC);
+        ClienteDAO = fabricaAbstractaDAO.crearClienteDAO(gestorJDBC);
     }
     
      public int crearAutomovil(Cliente cliente) throws Exception{
         gestorJDBC.abrirConexion();
-        int registros_afecctados = iClienteDAO.ingresar(cliente);
+        int registros_afecctados = ClienteDAO.ingresar(cliente);
         gestorJDBC.cerrarConexion();
         return registros_afecctados;
     }
     
     public int modificarAutomovil(Cliente cliente) throws Exception{
         gestorJDBC.abrirConexion();
-        int registros_afectados = iClienteDAO.modificar(cliente);
+        int registros_afectados = ClienteDAO.modificar(cliente);
         gestorJDBC.cerrarConexion();
         return registros_afectados;
     }
     
     public int eliminarAutomovil(Cliente cliente) throws Exception{
         gestorJDBC.abrirConexion();
-        int registros_afectados = iClienteDAO.eliminar(cliente);
+        int registros_afectados = ClienteDAO.eliminar(cliente);
         gestorJDBC.cerrarConexion();
         return registros_afectados;
     }

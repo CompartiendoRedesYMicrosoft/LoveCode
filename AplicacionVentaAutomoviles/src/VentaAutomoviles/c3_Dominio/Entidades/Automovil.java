@@ -77,20 +77,13 @@ public class Automovil {
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
-
-    public Automovil(int automovilId, String modelo, String color, double precio, String motor, String anioFabricacion, String descripcion, String imagen) {
-        this.automovilId = automovilId;
-        this.modelo = modelo;
-        this.color = color;
-        this.precio = precio;
-        this.motor = motor;
-        this.anioFabricacion = anioFabricacion;
-        this.descripcion = descripcion;
-        this.imagen = imagen;
+    
+    public boolean validarPrecio(){
+        if(precio>0){
+            return true;
+        }else{
+            return false;
+        }
     }
-
-
-
-
     
 }
