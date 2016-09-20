@@ -13,7 +13,7 @@ public class GestorJDBCSqlServer extends GestorJDBC{
     @Override
     public void abrirConexion() throws Exception {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        String url = "jdbc:sqlserver:.;databaseName=VentaAutomoviles";
+        String url = "jdbc:sqlserver://localhost:1433;databaseName=VentaAutomoviles";
         conexion = DriverManager.getConnection(url, "sa", "123456");
     }
     

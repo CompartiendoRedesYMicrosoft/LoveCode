@@ -24,15 +24,16 @@ public class AutomovilDAOSqlServer implements IAutomovilDAO{
     
     @Override
     public int ingresar(Automovil automovil) throws SQLException {
-        String sentenciaSQL= "insert into automovil(modelo, color, precio, motor, anioFabricacion, descripcion, imagen) "
+        String sentenciaSQL= "insert into Automovil(AutomovilModelo, AutomovilColor, AutomovilPrecio, AutomovilMotor, AutomovilAfabricacion, AutomovilDescripcion, AutomovilImagen) "
                 + "values(?,?,?,?,?,?,?)";
         PreparedStatement sentencia = gestorJBDC.prepararSentencia(sentenciaSQL);
         sentencia.setString(1, automovil.getModelo());
         sentencia.setString(2, automovil.getColor());
         sentencia.setDouble(3, automovil.getPrecio());
-        sentencia.setString(4, automovil.getAnioFabricacion());
-        sentencia.setString(5, automovil.getDescripcion());
-        sentencia.setString(6, automovil.getImagen());
+        sentencia.setString(4, automovil.getMotor());
+        sentencia.setString(5, automovil.getAnioFabricacion());
+        sentencia.setString(6, automovil.getDescripcion());
+        sentencia.setString(7, automovil.getImagen());
         return sentencia.executeUpdate();
     }
 
