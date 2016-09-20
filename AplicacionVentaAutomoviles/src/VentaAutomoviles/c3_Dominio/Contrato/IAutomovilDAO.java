@@ -14,6 +14,5 @@ public interface IAutomovilDAO {
     public int modificar(Automovil automovil) throws SQLException;
     public int eliminar(Automovil automovil) throws SQLException;
     public List<Automovil> buscar(String modelo) throws SQLException;
-    public Automovil buscar(int id) throws SQLException;
     
 }

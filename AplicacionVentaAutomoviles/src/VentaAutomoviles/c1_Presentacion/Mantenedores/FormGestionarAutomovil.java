@@ -202,7 +202,7 @@ public class FormGestionarAutomovil extends javax.swing.JDialog {
                 JOptionPane.showMessageDialog(null, "No se pudo registrar");
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error negativo");
         }
 
     }//GEN-LAST:event_btnGuardarActionPerformed
